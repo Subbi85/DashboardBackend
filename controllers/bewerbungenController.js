@@ -40,11 +40,14 @@ const postBewerbungen = asyncHandler( async (req, res)=>{
     }
 
     const bewerbung = await BewerbungSchema.create({
-        title : req.body.title
+        title : req.body.title,
+        company: req.body.company,
+        contact: req.body.contact,
+        status: req.body.status,
+        link: req.body.link
     })
 
     res.status(200).json( bewerbung )
-    console.log(req.body.text);
 })
 
 // @description PUT a Bewerbung
