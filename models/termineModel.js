@@ -16,7 +16,7 @@ const termineSchema = mongoose.Schema({
     },
     frequenz: {
         type: String,
-        enum: ["täglich", "wöchentlich", "monatlich", "jährlich"], 
+        enum: ["einmalig","täglich", "wöchentlich", "monatlich", "jährlich"], 
         required: true
     }
 }, {timestamps: true});
